@@ -123,7 +123,7 @@ def runner():
 
             while not success:
                 try:
-                    rr = r.post("{}?p={}&q=موتور".format(url_city,str(i)))
+                    rr = r.get("{}?p={}&q=موتور".format(url_city,str(i)))
                     success = 1
                 except:
                     iden_()
@@ -146,7 +146,7 @@ def runner():
                 k = None
                 while not success:
                     try:
-                        k = r.post(lurl)
+                        k = r.get(lurl)
                         success = 1
                     except:
                         iden_()
